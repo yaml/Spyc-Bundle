@@ -9,14 +9,14 @@ use Exception;
 
 class Bundle {
 	
-	public static function load($string, $file = false) {
+	public function load($string, $file = false) {
 		$spyc = new Spyc;
 		
 		if($file) return $spyc->loadFile($string);
 		return $spyc->load($string);
 	}
 	
-	public static function dump($array) {
+	public function dump($array) {
 		$spyc = new Spyc;
 				
 		return $spyc->dump($array);
