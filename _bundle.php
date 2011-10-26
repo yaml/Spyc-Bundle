@@ -7,19 +7,11 @@ use Evolution\Kernel\IncompleteException;
 use Evolution\Kernel\Configure;
 use Exception;
 
-class Bundle {
+class Bundle extends DSpyc {
 	
-	public function load($string, $file = false) {
-		$spyc = new Spyc;
-		
-		if($file) return $spyc->loadFile($string);
-		return $spyc->load($string);
-	}
-	
-	public function dump($array) {
-		$spyc = new Spyc;
-				
-		return $spyc->dump($array);
+	public function load($string, $file = false) {		
+		if($file) return $this->file($string);
+		return $this->string($string);
 	}
 	
 }
