@@ -9,7 +9,7 @@ use Exception;
 
 class Bundle extends DSpyc {
 	
-	public function load($string, $file = false) {		
+	public function load($string, $file = false) {
 		if($file) return $this->file($string);
 		return $this->string($string);
 	}
